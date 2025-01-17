@@ -1,8 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍕 Pizza Order Form Validation
+
+A pizza order form validation with Next.js 15, TypeScript, and Tailwind CSS.
+
+## Demo
+
+<img src="./public/demo1.png" width="600" alt="Demo 1" />
+
+<img src="./public/demo2.png" width="600" alt="Demo 2" />
+
+<img src="./public/demo3.gif" width="600" alt="Demo 3" />
+
+## Tech Stack
+
+- [Next.js 15](https://nextjs.org/) - React framework
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [React Hook Form](https://react-hook-form.com/) - Form handling
+- [Zod](https://zod.dev/) - Form validation
+- [HookForm Resolvers](https://github.com/react-hook-form/resolvers) - Form validation integration
+
+## Features
+
+- Type-safe form handling with TypeScript
+- Modern and responsive UI with Tailwind CSS
+- Form validation using Zod
+- Modular component architecture
+- Real-time price calculation
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +55,28 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/
+│   ├── components/         # React components
+│   │   ├── CustomerInfo.tsx
+│   │   ├── PizzaForm.tsx
+│   │   ├── PizzaTypeSelection.tsx
+│   │   ├── ToppingsSelection.tsx
+│   │   └── TotalPrice.tsx
+│   ├── layout.tsx         # Root layout component
+│   └── page.tsx           # Main page
+├── lib/
+│   ├── constants.ts       # Application constants
+│   ├── schema.ts         # Zod validation schemas
+│   └── types.ts          # TypeScript types
+```
 
-## Learn More
+## Form Features
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Pizza type selection
+- Extra toppings (up to 2)
+- Customer information
+- Real-time price calculation
+- Form validation with error messages
